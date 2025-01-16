@@ -67,75 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         : "none";
   });
 
-  // GitHub API Integration
-  const GITHUB_USERNAME = "frinklx";
-  const GITHUB_TOKEN =
-    "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"; // You'll need to use environment variables in production
-
-  async function fetchGitHubData() {
-    try {
-      const headers = {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      };
-
-      // Fetch user data
-      const userData = await fetch(
-        `https://api.github.com/users/${GITHUB_USERNAME}`,
-        {
-          headers,
-        }
-      ).then((res) => res.json());
-
-      // Update stats
-      document.getElementById("repo-count").textContent = userData.public_repos;
-      document.getElementById("followers-count").textContent =
-        userData.followers;
-      document.getElementById("profile-img").src = userData.avatar_url;
-
-      // Fetch repositories
-      const repos = await fetch(
-        `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=stars&per_page=6`,
-        {
-          headers,
-        }
-      ).then((res) => res.json());
-
-      // Calculate total stars
-      const totalStars = repos.reduce(
-        (acc, repo) => acc + repo.stargazers_count,
-        0
-      );
-      document.getElementById("stars-count").textContent = totalStars;
-
-      // Display repositories
-      const repoCards = document.getElementById("repo-cards");
-      repoCards.innerHTML = repos
-        .map(
-          (repo) => `
-            <a href="${repo.html_url}" class="repo-card" target="_blank">
-              <h3>
-                <i class="far fa-folder"></i>
-                ${repo.name}
-              </h3>
-              <p>${repo.description || "No description available"}</p>
-              <div class="repo-meta">
-                <span><i class="fas fa-star"></i> ${
-                  repo.stargazers_count
-                }</span>
-                <span><i class="fas fa-code-branch"></i> ${
-                  repo.forks_count
-                }</span>
-                <span>${repo.language || "N/A"}</span>
-              </div>
-            </a>
-          `
-        )
-        .join("");
-    } catch (error) {
-      console.error("Error fetching GitHub data:", error);
-    }
-  }
-
   // Typing effect for role
   function typeRole() {
     const roles = [
@@ -177,32 +108,65 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initialize
-  fetchGitHubData();
   typeRole();
 
-  // Contact Form Handling
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
+  // Intersection Observer for reveal animations
+  function setupAnimations() {
+    const animatedElements = document.querySelectorAll("[data-animate]");
 
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const animation = el.dataset.animate;
+            const delay = el.dataset.delay;
 
-      // Add your form submission logic here
-      console.log("Form submitted:", data);
+            el.classList.add(animation);
+            if (delay) {
+              el.classList.add(`delay-${delay}`);
+            }
 
-      // Example: Show success message
-      const submitBtn = contactForm.querySelector(".submit-btn");
-      submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-      submitBtn.style.background = "var(--success-green)";
+            // Unobserve after animation
+            observer.unobserve(el);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "50px",
+      }
+    );
 
-      // Reset form after delay
+    animatedElements.forEach((el) => observer.observe(el));
+  }
+
+  // Initial page load animation sequence
+  function initialLoadAnimations() {
+    // Navbar animation
+    const navbar = document.querySelector(".navbar");
+    navbar.style.opacity = "0";
+    navbar.style.transform = "translateY(-20px)";
+
+    setTimeout(() => {
+      navbar.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+      navbar.style.opacity = "1";
+      navbar.style.transform = "translateY(0)";
+    }, 100);
+
+    // Hero section stagger animation
+    const heroElements = document.querySelectorAll(".hero [data-animate]");
+    heroElements.forEach((el, index) => {
       setTimeout(() => {
-        contactForm.reset();
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        submitBtn.style.background = "var(--blue)";
-      }, 3000);
+        const animation = el.dataset.animate;
+        el.classList.add(animation);
+      }, 200 + index * 100);
     });
   }
+
+  // Setup reveal animations
+  setupAnimations();
+
+  // Start initial load animations
+  initialLoadAnimations();
 });

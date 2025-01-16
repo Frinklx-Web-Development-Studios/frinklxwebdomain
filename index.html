@@ -49,9 +49,9 @@
       <section class="hero">
         <div class="hero-container">
           <div class="hero-content">
-            <div class="profile-card">
+            <div class="profile-card" data-animate="animate-fade-left" data-delay="1">
               <div class="profile-image">
-                <img src="your-image-url.jpg" alt="frinklx" id="profile-img" />
+                <img src="images/frinklx.png" alt="frinklx" id="profile-img" />
                 <div class="status-badge" title="Coding status">
                   <i class="fas fa-circle"></i> Coding
                 </div>
@@ -59,34 +59,34 @@
               <div class="github-stats">
                 <div class="stat">
                   <i class="fas fa-code-branch"></i>
-                  <span id="repo-count">0</span>
+                  <span>13</span>
                   <small>repositories</small>
                 </div>
                 <div class="stat">
                   <i class="fas fa-star"></i>
-                  <span id="stars-count">0</span>
+                  <span>0</span>
                   <small>stars</small>
                 </div>
                 <div class="stat">
                   <i class="fas fa-users"></i>
-                  <span id="followers-count">0</span>
+                  <span>1</span>
                   <small>followers</small>
                 </div>
               </div>
             </div>
 
             <div class="hero-text">
-              <div class="code-comment">// Hello, World! I am</div>
-              <h1 class="glitch-text">frinklx</h1>
-              <div class="typewriter">
+              <div class="code-comment" data-animate="animate-fade-right" data-delay="2">// Hello, World! I am</div>
+              <h1 class="glitch-text" data-animate="animate-fade-right" data-delay="3">frinklx</h1>
+              <div class="typewriter" data-animate="animate-fade-right" data-delay="4">
                 <span id="role-text"></span>
                 <span class="cursor">_</span>
               </div>
-              <p class="bio">
+              <p class="bio" data-animate="animate-fade-right" data-delay="5">
                 Hi! I'm frinklx, a full-stack developer and designer. I'm a passionate about creating beautiful and functional websites and applications. I am 13 years old and am self taught. this website itself was built by me! If you need a website built, contact me!
               </p>
 
-              <div class="cta-buttons">
+              <div class="cta-buttons" data-animate="animate-fade-up" data-delay="6">
                 <a href="#contact" class="cta-primary">
                   <i class="fas fa-terminal"></i>
                   Start a conversation
@@ -99,12 +99,88 @@
             </div>
           </div>
 
-          <div class="repo-grid" id="work">
+          <div class="repo-grid" id="work" data-animate="animate-fade-up">
             <h2 class="section-title">
               <span class="code-comment">// Featured Repositories</span>
             </h2>
-            <div class="repo-cards" id="repo-cards">
-              <!-- Repositories will be dynamically inserted here -->
+            <div class="repo-cards">
+              <a href="https://github.com/frinklx/neosentrix.com" class="repo-card" target="_blank">
+                <h3>
+                  <i class="far fa-folder"></i>
+                  neosentrix.com
+                </h3>
+                <p>My personal portfolio website</p>
+                <div class="repo-meta">
+                  <span><i class="fas fa-star"></i> 0</span>
+                  <span><i class="fas fa-code-branch"></i> 0</span>
+                  <span>HTML</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/frinklx/omastro_web" class="repo-card" target="_blank">
+                <h3>
+                  <i class="far fa-folder"></i>
+                  omastro_web
+                </h3>
+                <p>No description available</p>
+                <div class="repo-meta">
+                  <span><i class="fas fa-star"></i> 0</span>
+                  <span><i class="fas fa-code-branch"></i> 0</span>
+                  <span>CSS</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/frinklx/duckywebdev" class="repo-card" target="_blank">
+                <h3>
+                  <i class="far fa-folder"></i>
+                  duckywebdev
+                </h3>
+                <p>No description available</p>
+                <div class="repo-meta">
+                  <span><i class="fas fa-star"></i> 0</span>
+                  <span><i class="fas fa-code-branch"></i> 0</span>
+                  <span>N/A</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/frinklx/ai_agents" class="repo-card" target="_blank">
+                <h3>
+                  <i class="far fa-folder"></i>
+                  ai_agents
+                </h3>
+                <p>No description available</p>
+                <div class="repo-meta">
+                  <span><i class="fas fa-star"></i> 0</span>
+                  <span><i class="fas fa-code-branch"></i> 0</span>
+                  <span>Python</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/frinklx/Codinglab-P2" class="repo-card" target="_blank">
+                <h3>
+                  <i class="far fa-folder"></i>
+                  Codinglab-P2
+                </h3>
+                <p>No description available</p>
+                <div class="repo-meta">
+                  <span><i class="fas fa-star"></i> 0</span>
+                  <span><i class="fas fa-code-branch"></i> 0</span>
+                  <span>Python</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/frinklx/duckytest" class="repo-card" target="_blank">
+                <h3>
+                  <i class="far fa-folder"></i>
+                  duckytest
+                </h3>
+                <p>No description available</p>
+                <div class="repo-meta">
+                  <span><i class="fas fa-star"></i> 0</span>
+                  <span><i class="fas fa-code-branch"></i> 0</span>
+                  <span>N/A</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -115,11 +191,11 @@
       <!-- Skills Section -->
       <section class="skills-section" id="skills">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title" data-animate="animate-fade-up">
             <span class="code-comment">// Technical Arsenal</span>
           </h2>
           <div class="skills-grid">
-            <div class="skill-category">
+            <div class="skill-category" data-animate="animate-fade-up" data-delay="1">
               <h3><i class="fas fa-code"></i> Languages</h3>
               <div class="skill-tags">
                 <span class="skill-tag">JavaScript</span>
@@ -132,7 +208,7 @@
               </div>
             </div>
 
-            <div class="skill-category">
+            <div class="skill-category" data-animate="animate-fade-up" data-delay="2">
               <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
               <div class="skill-tags">
                 <span class="skill-tag">React</span>
@@ -145,7 +221,7 @@
               </div>
             </div>
 
-            <div class="skill-category">
+            <div class="skill-category" data-animate="animate-fade-up" data-delay="3">
               <h3><i class="fas fa-database"></i> Databases</h3>
               <div class="skill-tags">
                 <span class="skill-tag">MongoDB</span>
@@ -154,7 +230,7 @@
               </div>
             </div>
 
-            <div class="skill-category">
+            <div class="skill-category" data-animate="animate-fade-up" data-delay="4">
               <h3><i class="fas fa-tools"></i> My Tools</h3>
               <div class="skill-tags">
                 <span class="skill-tag">Github</span>
@@ -175,11 +251,11 @@
       <!-- Experience Timeline -->
       <section class="experience-section" id="experience">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title" data-animate="animate-fade-up">
             <span class="code-comment">// Career.map(year => experience)</span>
           </h2>
           <div class="timeline">
-            <div class="timeline-item">
+            <div class="timeline-item" data-animate="animate-fade-left">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <div class="timeline-date">Jan 2025 - Present</div>
@@ -223,13 +299,13 @@
       <!-- Featured Projects -->
       <section class="projects-section" id="project">
         <div class="container">
-          <h2 class="section-title">
+          <h2 class="section-title" data-animate="animate-fade-up">
             <span class="code-comment"
               >// Featured.filter(project => project.isAwesome)</span
             >
           </h2>
           <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" data-animate="animate-scale" data-delay="1">
               <div class="project-header">
                 <i class="far fa-folder-open"></i>
                 <div class="project-links">
@@ -257,7 +333,7 @@
       <!-- Replace the contact section with this footer -->
       <footer class="footer">
         <div class="footer-grid">
-          <div class="footer-section">
+          <div class="footer-section" data-animate="animate-fade-up" data-delay="1">
             <div class="footer-brand">
               <span class="code-keyword">const</span> 
               <span class="code-variable">contact</span> 
@@ -278,7 +354,7 @@
             </div>
           </div>
 
-          <div class="footer-section">
+          <div class="footer-section" data-animate="animate-fade-up" data-delay="2">
             <h3 class="footer-title">
               <span class="code-comment">// Navigation</span>
             </h3>
@@ -290,7 +366,7 @@
             </ul>
           </div>
 
-          <div class="footer-section">
+          <div class="footer-section" data-animate="animate-fade-up" data-delay="3">
             <h3 class="footer-title">
               <span class="code-comment">// Latest Projects</span>
             </h3>
@@ -312,7 +388,7 @@
             </ul>
           </div>
 
-          <div class="footer-section">
+          <div class="footer-section" data-animate="animate-fade-up" data-delay="4">
             <h3 class="footer-title">
               <span class="code-comment">// Quick Contact</span>
             </h3>
@@ -323,7 +399,7 @@
           </div>
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer-bottom" data-animate="animate-fade-up" data-delay="5">
           <div class="code-line">
             <span class="code-bracket">}</span>
             <span class="code-comment">// © 2024 frinklx. All rights reserved.</span>
