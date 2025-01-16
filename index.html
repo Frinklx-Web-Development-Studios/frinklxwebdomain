@@ -1,118 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Neosentrix Studios - Designing and developing cutting-edge digital solutions to help your business thrive in the digital age."
-    />
-    <meta
-      name="keywords"
-      content="Neosentrix Studios, digital agency, web development, mobile apps, SEO, digital solutions, business growth"
-    />
-    <meta name="author" content="Neosentrix Studios" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Social Media / Open Graph Metadata -->
-    <meta
-      property="og:title"
-      content="Neosentrix Studios | Cutting-Edge Digital Solutions"
-    />
-    <meta
-      property="og:description"
-      content="Explore how Neosentrix Studios creates innovative websites, mobile apps, and marketing strategies to help businesses grow in the digital age."
-    />
-    <meta property="og:image" content="images/social-preview.jpg" />
-    <meta property="og:url" content="https://neosentrix.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Neosentrix Studios" />
-
-    <!-- Twitter Card Metadata -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Neosentrix Studios | Cutting-Edge Digital Solutions"
-    />
-    <meta
-      name="twitter:description"
-      content="Explore how Neosentrix Studios creates innovative websites, mobile apps, and marketing strategies to help businesses grow in the digital age."
-    />
-    <meta name="twitter:image" content="images/social-preview.jpg" />
-    <meta name="twitter:site" content="@Neosentrix" />
-
-    <!-- Favicon and Icon Links -->
-    <link rel="shortcut icon" href="images/mainlog.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-icon.png" />
-    <link rel="icon" sizes="192x192" href="images/android-icon.png" />
-
-    <!-- Additional Metadata -->
-    <meta name="theme-color" content="#000000" />
-    <meta name="msapplication-navbutton-color" content="#000000" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <meta name="application-name" content="Neosentrix Studios" />
-    <meta name="msapplication-TileImage" content="images/tile-icon.png" />
-    <meta name="msapplication-TileColor" content="#000000" />
-
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://neosentrix.com" />
-
-    <!-- Styles and Fonts -->
-    <title>Neosentrix Studios</title>
+    <title>frinklx</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Fira Code for coding theme -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
   </head>
   <body>
-    <!-- Navbar -->
-    <div class="navbar-navbar-container">
-      <nav class="navbar">
-        <div class="navbar-container">
-          <!-- Logo -->
-          <a href="/" class="logo">
-            <img src="images/mainlog.png" alt="NeosentrixServices Logo" />
-            <span class="h1-logo">Neosentrix</span>
-          </a>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">frinklx</a>
 
-          <!-- Navigation Links -->
-          <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-
-          <!-- Call-To-Action Button -->
-          <a href="/support" class="cta-btn">Discord</a>
+        <div class="nav-links">
+          <a href="#home" class="nav-link active" data-label="home">home</a>
+          <a href="#work" class="nav-link" data-label="work">work</a>
+          <a href="#skills" class="nav-link" data-label="skills">skills</a>
+          <a href="#experience" class="nav-link" data-label="experience">experience</a>
+          <a href="#project" class="nav-link" data-label="project">projects</a>
         </div>
-      </nav>
-    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>Welcome to <br />Neosentrix Studios</h1>
-          <p>
-            We design and develop cutting-edge solutions to help your business
-            thrive in the digital age.
-          </p>
-          <div class="hero-buttons">
-            <a href="#services" class="btn-primary">Get Started</a>
-            <a href="#contact" class="btn-secondary">Learn More</a>
+        <div class="nav-socials">
+          <a href="https://github.com/frinklx" aria-label="GitHub" data-import="github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://discord.com/users/1241605075047153776" aria-label="Discord" data-import="discord">
+            <i class="fab fa-discord"></i>
+          </a>
+        </div>
+
+        <button class="nav-toggle">
+          <i class="fas fa-code"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="profile-card">
+              <div class="profile-image">
+                <img src="your-image-url.jpg" alt="frinklx" id="profile-img" />
+                <div class="status-badge" title="Coding status">
+                  <i class="fas fa-circle"></i> Coding
+                </div>
+              </div>
+              <div class="github-stats">
+                <div class="stat">
+                  <i class="fas fa-code-branch"></i>
+                  <span id="repo-count">0</span>
+                  <small>repositories</small>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span id="stars-count">0</span>
+                  <small>stars</small>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-users"></i>
+                  <span id="followers-count">0</span>
+                  <small>followers</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-text">
+              <div class="code-comment">// Hello, World! I am</div>
+              <h1 class="glitch-text">frinklx</h1>
+              <div class="typewriter">
+                <span id="role-text"></span>
+                <span class="cursor">_</span>
+              </div>
+              <p class="bio">
+                Hi! I'm frinklx, a full-stack developer and designer. I'm a passionate about creating beautiful and functional websites and applications. I am 13 years old and am self taught. this website itself was built by me! If you need a website built, contact me!
+              </p>
+
+              <div class="cta-buttons">
+                <a href="#contact" class="cta-primary">
+                  <i class="fas fa-terminal"></i>
+                  Start a conversation
+                </a>
+                <a href="#projects" class="cta-secondary">
+                  <i class="fas fa-code"></i>
+                  View my work
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="repo-grid" id="work">
+            <h2 class="section-title">
+              <span class="code-comment">// Featured Repositories</span>
+            </h2>
+            <div class="repo-cards" id="repo-cards">
+              <!-- Repositories will be dynamically inserted here -->
+            </div>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="images/hero.gif" alt="Hero Image" />
+
+        <div class="code-background"></div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills-section" id="skills">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="code-comment">// Technical Arsenal</span>
+          </h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3><i class="fas fa-code"></i> Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">Dart</span>
+                <span class="skill-tag">Swift</span>
+                <!-- Add more languages -->
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">discord.js</span>
+                <span class="skill-tag">discord.py</span>
+                <!-- Add more frameworks -->
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3><i class="fas fa-database"></i> Databases</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">SQLite</span>
+                <!-- Add more databases -->
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3><i class="fas fa-tools"></i> My Tools</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Github</span>
+                <span class="skill-tag">VSC</span>
+                <span class="skill-tag">MacOS</span>
+                <span class="skill-tag">Windows</span>
+                <span class="skill-tag">Codespaces</span>
+                <span class="skill-tag">Replit</span>
+                <span class="skill-tag">Aceternity</span>
+                <span class="skill-tag">Netlify</span>
+                <!-- Add more tools -->
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Experience Timeline -->
+      <section class="experience-section" id="experience">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="code-comment">// Career.map(year => experience)</span>
+          </h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">Jan 2025 - Present</div>
+                <h3>Founder @ Intrabot</h3>
+                <p>#1 Server Manager for free. [ BETA ]</p>
+                <div class="tech-stack">
+                  <span>discord.js</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JS</span>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-date">Nov 2024 - Present</div>
+                <h3>Web Developer @ duckybot.xyz</h3>
+                <p>Developing Ducky's official website for the public</p>
+                <div class="tech-stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JS</span>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-date">Jan 2024 - July 2024</div>
+                <h3>Freelancer</h3>
+                <p>Doing bot & webdev commissions for clients.</p>
+                <div class="tech-stack">
+                  <span>discord.js</span>
+                  <span>discord.py</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JS</span>
+                  <span>Python</span>
+                  <span>Node.js</span>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section class="projects-section" id="project">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="code-comment"
+              >// Featured.filter(project => project.isAwesome)</span
+            >
+          </h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-header">
+                <i class="far fa-folder-open"></i>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="#" target="_blank"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+              <h3>Intrabot</h3>
+              <p>#1 Server Manager for free. [ BETA ]</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>MongoDB</span>
+                <span>discord.js</span>
+              </div>
+            </div>
+            <!-- Add more project cards -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Replace the contact section with this footer -->
+      <footer class="footer">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <div class="footer-brand">
+              <span class="code-keyword">const</span> 
+              <span class="code-variable">contact</span> 
+              <span class="code-operator">=</span> 
+              <span class="code-bracket">{</span>
+            </div>
+            <p class="footer-bio">Building digital experiences with clean code and creative solutions. Always open to new opportunities and collaborations.</p>
+            <div class="social-links">
+              <a href="https://github.com/frinklx" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:intrabotofficial@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://discord.gg/duckybot" target="_blank" class="social-link">
+                <i class="fab fa-discord"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">
+              <span class="code-comment">// Navigation</span>
+            </h3>
+            <ul class="footer-links">
+              <li><span class="code-dot">•</span><a href="#home">home</a></li>
+              <li><span class="code-dot">•</span><a href="#work">work</a></li>
+              <li><span class="code-dot">•</span><a href="#about">about</a></li>
+              <li><span class="code-dot">•</span><a href="#projects">projects</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">
+              <span class="code-comment">// Latest Projects</span>
+            </h3>
+            <ul class="footer-links">
+              <li>
+                <span class="code-dot">•</span>
+                <a href="#" class="project-link">
+                  <span class="project-name">Intrabot</span>
+                  <span class="project-status">beta</span>
+                </a>
+              </li>
+              <li>
+                <span class="code-dot">•</span>
+                <a href="#" class="project-link">
+                  <span class="project-name">duckybot.xyz</span>
+                  <span class="project-status">live</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">
+              <span class="code-comment">// Quick Contact</span>
+            </h3>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> intrabotofficial@gmail.com</p>
+              <p><i class="fab fa-discord"></i> @frinklx</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="code-line">
+            <span class="code-bracket">}</span>
+            <span class="code-comment">// © 2024 frinklx. All rights reserved.</span>
+          </div>
+          <div class="code-stats">
+            <span class="stat-item"><i class="fas fa-code"></i> with <i class="fas fa-heart"></i></span>
+            <span class="stat-item"><i class="fas fa-coffee"></i> fueled development</span>
+          </div>
+    </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
