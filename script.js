@@ -1,6 +1,3 @@
-import dotenv from "dotenv";
-dotenv.config();
-
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const navToggle = document.querySelector(".nav-toggle");
@@ -72,7 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // GitHub API Integration
   const GITHUB_USERNAME = "frinklx";
-  const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+  const GITHUB_TOKEN =
+    "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"; // You'll need to use environment variables in production
 
   async function fetchGitHubData() {
     try {
