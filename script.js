@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // GitHub API Integration
   const GITHUB_USERNAME = "frinklx";
   const GITHUB_TOKEN =
-    "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"; // You'll need to use environment variables in production
+    "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"; // You'll need to use environment variables in production
 
   async function fetchGitHubData() {
     try {
